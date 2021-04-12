@@ -8,7 +8,7 @@
       <router-link to="/SonA">子路由A</router-link>
     </div>
     <div>{{shouldKeepAlive}}</div>
-    <p>配置说明：子路由A是 about的子路由，并在keppalive中缓存，其他路由均不缓存，about 也不缓存</p>
+    <p>配置说明：子路由A是 about的子路由，并在keepAlive中缓存，其他路由均不缓存，about 也不缓存</p>
     <p>操作说明：默认进入Home页面， 首先点击进入 about， 再次 点击查看子路由A， 查看控制台打印</p>
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive"></router-view>
