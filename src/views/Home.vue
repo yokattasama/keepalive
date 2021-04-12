@@ -1,7 +1,8 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h3>Home 首页</h3>
+<!--    <img alt="Vue logo" src="../assets/logo.png">-->
+<!--    <HelloWorld msg="Welcome to Your Vue.js App"/>-->
   </div>
 </template>
 
@@ -18,7 +19,7 @@ export default {
     console.log('Home created')
   },
   mounted() {
-    console.log('Home mounted')
+    // console.log('Home mounted')
   },
   destroyed() {
     console.log('Home destroyed')

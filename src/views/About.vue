@@ -1,6 +1,10 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <h3>About 关于</h3>
+    <keep-alive>
+      <router-view v-if="$route.meta.keepAlive"></router-view>
+    </keep-alive>
+    <router-view v-if="!$route.meta.keepAlive"></router-view>
   </div>
 </template>
 
@@ -13,13 +17,13 @@ export default {
     }
   },
   created() {
-    console.log('About created')
+    console.log('About 创建')
   },
   mounted() {
-    console.log('About mounted')
+    // console.log('About mounted')
   },
   destroyed() {
-    console.log('About destroyed')
+    console.log('About 销毁')
   }
 }
 </script>

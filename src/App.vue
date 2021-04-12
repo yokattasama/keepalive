@@ -3,16 +3,14 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/other">Other</router-link>
+      <router-link to="/other">Other</router-link> |
+      <router-link to="/SonA">子路由A</router-link>
     </div>
     <div>{{shouldKeepAlive}}</div>
     <keep-alive>
       <router-view v-if="$route.meta.keepAlive"></router-view>
     </keep-alive>
     <router-view v-if="!$route.meta.keepAlive"></router-view>
-<!--    <keep-alive include="About">
-      <router-view></router-view>
-    </keep-alive>-->
   </div>
 </template>
 
@@ -30,10 +28,7 @@ export default {
     }
   },
   watch: {
-    '$route': function(val) {
-      console.log(val)
-      console.log(this.$route.meta.keepAlive);
-    }
+    '$route': function(val) {}
   },
 }
 

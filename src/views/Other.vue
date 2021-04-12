@@ -1,5 +1,5 @@
 <template>
-  <div>其他页面</div>
+  <h3> Other 其他页面</h3>
 </template>
 
 <script>
@@ -9,7 +9,7 @@ export default {
     console.log('Other created')
   },
   mounted() {
-    console.log('Other mounted')
+    // console.log('Other mounted')
   },
   destroyed() {
     console.log('Other destroyed')
