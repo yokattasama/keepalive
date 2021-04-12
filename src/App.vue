@@ -5,15 +5,39 @@
       <router-link to="/about">About</router-link> |
       <router-link to="/other">Other</router-link>
     </div>
-<!--    <keep-alive>
+    <div>{{shouldKeepAlive}}</div>
+    <keep-alive>
       <router-view v-if="$route.meta.keepAlive"></router-view>
     </keep-alive>
-    <router-view v-if="!$route.meta.keepAlive"></router-view>-->
-    <keep-alive include="About">
+    <router-view v-if="!$route.meta.keepAlive"></router-view>
+<!--    <keep-alive include="About">
       <router-view></router-view>
-    </keep-alive>
+    </keep-alive>-->
   </div>
 </template>
+
+<script>
+export default {
+  name: 'App',
+  data() {
+    return {
+
+    }
+  },
+  computed: {
+    shouldKeepAlive() {
+      return this.$route.meta.keepAlive ? '缓存页面': '不缓存当前页面'
+    }
+  },
+  watch: {
+    '$route': function(val) {
+      console.log(val)
+      console.log(this.$route.meta.keepAlive);
+    }
+  },
+}
+
+</script>
 
 <style>
 #app {
